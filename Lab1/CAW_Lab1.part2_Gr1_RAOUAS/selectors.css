@@ -1,0 +1,121 @@
+/* ---------------------------------------------------
+   1. Universal and Type Selectors
+--------------------------------------------------- */
+
+/* Universal selector: applies to all elements */
+* {
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+/* Body background */
+body {
+    background-color: #f4f4f4;
+}
+
+/* Headings */
+h1, h2 {
+    text-align: center;
+    color: #336699;
+}
+
+/* Paragraph spacing */
+p {
+    margin-bottom: 1em;
+}
+
+/* ---------------------------------------------------
+   2. Class and ID Selectors
+--------------------------------------------------- */
+
+/* Paragraph with ID "special" */
+#special {
+    background-color: #fffacd;
+    padding: 10px;
+}
+
+/* Elements with class "hello" */
+.hello {
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* ---------------------------------------------------
+   3. Descendant and Child Selectors
+--------------------------------------------------- */
+
+/* Only h2 elements that are direct children of .main-content or .ai-tools */
+.main-content > h2,
+.ai-tools > h2 {
+    text-transform: uppercase;
+}
+
+/* li elements that are descendants of .ai-tools */
+.ai-tools li {
+    list-style-type: square;
+}
+
+/* ul inside .ai-tools */
+.ai-tools ul {
+    padding-left: 20px;
+}
+
+/* ---------------------------------------------------
+   4. Attribute Selectors
+--------------------------------------------------- */
+
+/* Input type="text" */
+input[type="text"] {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+/* Input type="submit" */
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+}
+
+/* ---------------------------------------------------
+   5. Pseudo-classes and Pseudo-elements
+--------------------------------------------------- */
+
+/* All links */
+a {
+    color: #007bff;
+}
+
+/* Hover state for links */
+a:hover {
+    text-decoration: none;
+    color: #0056b3; /* slightly darker blue */
+}
+
+/* Visited link example */
+a:visited {
+    color: #6c757d;
+}
+
+/* Focus state for input fields */
+input:focus {
+    border: 2px solid blue;
+}
+
+/* ---------------------------------------------------
+   6. Combining Selectors & Specificity Challenge
+--------------------------------------------------- */
+
+/* li elements inside .ai-tools that ALSO have class "hello" */
+.ai-tools li.hello {
+    font-style: italic;
+}
+
+/* h1 inside footer (more specific) */
+footer h1 {
+    font-size: 1.2em;
+}
+
+/* All h1 elements */
+h1 {
+    font-size: 2em;
+}
